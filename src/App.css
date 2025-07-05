@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+}
+p{
+    font-size: 14px;
+    letter-spacing: 1.1px;
+}
+.main-container{
+    /* background-color: red; */
+    text-align: center;
+    padding-top: 20px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 90%;
+    /* border: 1px solid black; */
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 10px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #f0f4ff, #dbe4ff);
+    border: 1px solid #ccd6f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+.card img{
+    height: 100px;
+    width: 100px;
+}
+.card .type{
+    background-color: #7c6616;
+    padding: 7px 10px;
+    border-radius: 25px;
+    color: #fff;
+}
+.card .stats{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    justify-content: center;
+}
+.card .stats p{
+    background-color: #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 13px;
+}
