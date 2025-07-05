@@ -16,6 +16,29 @@ p{
     text-align: center;
     padding-top: 20px;
 }
+.main-container input {
+  height: 40px;
+  width: 260px;
+  border-radius: 20px;
+  padding: 0 15px 0 40px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  background-color: #f5f7f9;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/622/622669.png');
+  background-size: 18px;
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.main-container input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  background-color: #ffffff;
+}
+
 .cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
