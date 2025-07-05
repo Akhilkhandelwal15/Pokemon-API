@@ -7,6 +7,7 @@ export const Pokemon = ()=>{
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [search, setSearch] = useState("");
+    const [debouncedSearch, setDebouncedSearch] = useState("");
     
     const API = "https://pokeapi.co/api/v2/pokemon";
 
@@ -43,7 +44,16 @@ export const Pokemon = ()=>{
         fetchPokemons();
     }, []);
 
-    const filteredData = pokemons.filter((item)=> item.name.toLowerCase().includes(search.toLowerCase().trim()));
+     useEffect(()=>{
+        const timer = setTimeout(() => {
+            setDebouncedSearch(search);
+            console.log("hereee");
+        }, 500);
+
+        return ()=> clearTimeout();
+    }, [search]);
+
+    const filteredData = pokemons.filter((item)=> item.name.toLowerCase().includes(debouncedSearch.toLowerCase().trim()));
 
     return (
         <div className="main-container">
