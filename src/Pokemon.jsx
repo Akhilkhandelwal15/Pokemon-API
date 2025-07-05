@@ -66,7 +66,7 @@ export const Pokemon = ()=>{
                         ))}
                 </div>
             )}
-            {!loading && !error && filteredData.length===0 && <h1>No Results Found</h1>}
+            {!loading && !error && pokemons.length>0 && filteredData.length===0 && <h1>No Results Found</h1>}
         </div>
     );
 }
